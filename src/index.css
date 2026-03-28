@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap');
+
+@theme {
+  --color-clinic-orange: #df8d2f;
+  --color-clinic-blue: #1c355e;
+  --color-clinic-light: #f8fafc;
+  
+  --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", serif;
+}
+
+@layer utilities {
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.2em;
+  }
+}
+
+.selection\:bg-clinic-orange::selection {
+  background-color: var(--color-clinic-orange);
+}
+
+.selection\:text-white::selection {
+  color: white;
+}
